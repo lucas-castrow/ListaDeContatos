@@ -12,10 +12,11 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolBar"
             app:titleTextColor="#FFFFFF"
-            android:background="#707070"
             android:elevation="4dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="#3346AE"
+            />
 
         <LinearLayout
             android:layout_width="match_parent"

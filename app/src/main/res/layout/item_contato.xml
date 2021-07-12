@@ -1,31 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="16dp"
-    android:id="@+id/llItem">
+    android:padding="10dp"
+    >
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="302dp"
         android:layout_height="wrap_content"
-        android:padding="16dp"
         android:background="@drawable/rounded_edge"
         android:orientation="vertical"
+        android:padding="16dp"
+        android:id="@+id/llItem"
         >
+
         <TextView
             android:id="@+id/tvNome"
-            android:textColor="#FFFFFF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nome contato: Teste"/>
+            android:text="Nome contato: Teste"
+            android:textColor="#FFFFFF" />
+
         <TextView
             android:id="@+id/tvTelefone"
-            android:textColor="#FFFFFF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Telefone contato: Teste"/>
+            android:text="Telefone contato: Teste"
+            android:textColor="#FFFFFF" />
 
     </LinearLayout>
+
+    <ImageButton
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:id="@+id/btWhatsapp"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:layout_marginTop="0sp"
+        android:background="@drawable/whatsapp"
+        />
 
 </LinearLayout>
