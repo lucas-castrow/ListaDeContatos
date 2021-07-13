@@ -91,7 +91,7 @@ class MainActivity : BaseActivity() {
 
             val packageManager = this.packageManager
             val i = Intent(Intent.ACTION_VIEW)
-            val url = "https://api.whatsapp.com/send?phone=" +"$+55 $numero" + "&text=" +
+            val url = "https://api.whatsapp.com/send?phone=" +"$numero" + "&text=" +
                     URLEncoder.encode("Olá, fui encaminhado para o whatsapp")
             i.setPackage("com.gbwhatsapp")
             i.data = Uri.parse(url)

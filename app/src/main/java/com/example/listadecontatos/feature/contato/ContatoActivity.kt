@@ -23,6 +23,7 @@ class ContatoActivity : BaseActivity() {
         setupToolBar(toolBar, "Contato",true)
         setupContato()
         btnSalvarContato.setOnClickListener { onClickSalvarContato() }
+        btnExcluirContato.setOnClickListener { onClickExcluirContato() }
     }
 
     private fun setupContato(){
@@ -38,7 +39,7 @@ class ContatoActivity : BaseActivity() {
             var contato = lista.getOrNull(0) ?: return@Runnable
             runOnUiThread {
                 etNome.setText(contato.nome)
-                etTelefone.setText(contato.telefone)
+                etTelefone.setText(contato.telefone.substring(2))
                 progress.visibility = View.GONE
             }
         }).start()
@@ -46,11 +47,12 @@ class ContatoActivity : BaseActivity() {
 
     private fun onClickSalvarContato(){
         val nome = etNome.text.toString()
+        val code = pickerPais!!.selectedCountryCode
         val telefone = etTelefone.text.toString()
         val contato = ContatosVO(
             idContato,
             nome,
-            telefone
+            (code + telefone)
         )
         progress.visibility = View.VISIBLE
         Thread(Runnable {

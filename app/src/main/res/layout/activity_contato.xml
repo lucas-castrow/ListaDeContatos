@@ -24,10 +24,11 @@
             android:padding="16dp"
             android:orientation="vertical">
             <LinearLayout
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
-                android:background="#616161"
+                android:background="@color/primary"
                 android:orientation="vertical">
                 <TextView
                     android:textColor="#FFFFFF"
@@ -37,6 +38,7 @@
 
                 <EditText
                     android:id="@+id/etNome"
+                    android:textColor="@color/white"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -47,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:padding="16dp"
                 android:layout_marginTop="16dp"
-                android:background="#616161"
+                android:background="@color/primary"
                 android:orientation="vertical">
                 <TextView
                     android:textColor="#FFFFFF"
@@ -55,13 +57,32 @@
                     android:layout_height="wrap_content"
                     android:text="@string/telefone"/>
 
-                <EditText
-                    android:id="@+id/etTelefone"
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="number"
-                    />
+                    >
+                    <com.hbb20.CountryCodePicker
+                        app:ccp_hintExampleNumber="true"
+                        android:id="@+id/pickerPais"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:ccpDialog_textColor="@color/primary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
 
+                        app:ccp_autoDetectCountry="true"
+                        />
+
+
+                    <EditText
+                        android:id="@+id/etTelefone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:textColor="@color/white"
+                        />
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -69,7 +90,7 @@
                 android:layout_height="wrap_content"
                 android:padding="16dp"
                 android:layout_marginTop="16dp"
-                android:background="#616161"
+                android:background="@color/primary"
                 android:orientation="vertical">
 
                 <com.google.android.material.switchmaterial.SwitchMaterial
@@ -87,15 +108,16 @@
                 android:text="Salvar contato"
                 android:layout_marginTop="16dp"
                 android:layout_width="match_parent"
+                android:backgroundTint="@color/salvar"
                 android:layout_height="wrap_content" />
 
             <Button
                 android:id="@+id/btnExcluirContato"
-                android:onClick="onClickExcluirContato"
-                android:text="Excluir contato"
-                android:layout_marginTop="16dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/excluir"
+                android:text="Excluir contato" />
         </LinearLayout>
 
     </LinearLayout>
@@ -105,4 +127,6 @@
         android:visibility="gone"
         android:id="@+id/progress"
         android:layout_gravity="center" />
+
+
 </FrameLayout>
