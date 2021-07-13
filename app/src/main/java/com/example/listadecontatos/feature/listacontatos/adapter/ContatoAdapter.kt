@@ -13,6 +13,7 @@ import kotlinx.android.synthetic.main.item_contato.view.*
 class ContatoAdapter(
     private val context: Context,
     private val lista: List<ContatosVO>,
+    private val onClickWhats: ((String) -> Unit),
     private val onClick: ((Int) -> Unit)
 ) : RecyclerView.Adapter<ContatoViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContatoViewHolder {
@@ -28,6 +29,7 @@ class ContatoAdapter(
             tvNome.text = contato.nome
             tvTelefone.text = contato.telefone
             llItem.setOnClickListener { onClick(contato.id) }
+            btWhatsapp.setOnClickListener { onClickWhats(contato.telefone) }
         }
     }
 
