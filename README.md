@@ -4,3 +4,7 @@ O aplicativo é uma lista de contatos onde é possivel adicionar nomes e telefon
 
 
 <img src="https://user-images.githubusercontent.com/33181463/125397964-0b9e2080-e385-11eb-899e-f3737844f927.gif" width="320" height="520" />
+
+
+bibliotecas utilizadas:
+https://github.com/hbb20/CountryCodePickerProject
